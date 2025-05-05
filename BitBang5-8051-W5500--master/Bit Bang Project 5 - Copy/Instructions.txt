@@ -1,0 +1,20 @@
+1. To change the board to 6T mode cycle instead of 12. We set cpu_6t_enabled=true as an option in the makefile for the stcgal. Look at the difference between 
+   bit bang 4 makefile and bit bang 5 makefile
+2. when using sdcc use --model-small, I was told to use model-medium for now and when I figured it all out. I can switch to small and change the application up
+   to use sdcc to --model-medium, look at the makefile and see the differences. The only change is changing the CFlags.
+
+
+Part 2 -
+1. the stc89 operates on full-duplex (both sides can transmit simultaneously) which can transmit and receive simultaneously and at
+   different baud rates
+2. Look from 109-123, then 154
+3. https://embetronicx.com/tutorials/microcontrollers/8051/8051-uart-tutorial-serial-communication/
+4. Able to read and write to the Serial using 8051 (6T machine cycle)
+5. Setup Basic SPI communication for WIZnet in C (I am currently here)
+	- Read/Write to WIZnet
+	- set SOCKETS for WIZnet (UDP/TCP)
+	- Set WIZnet registers for IP Add, MAC, Port, Subnet and Gateway
+6. Verify the Ethernet Connectivity via Ping or similar 
+
+https://docs.wiznet.io/Product/iEthernet/W5500/Application/udp
+https://docs.wiznet.io/Product/iEthernet/W5500/Application/tcp
